@@ -13,7 +13,7 @@ object WebSocketManager  {
 
     fun connectWebSocket(url: String, listener: WebSocketListener) {
         val client = OkHttpClient.Builder()
-            .readTimeout(0, TimeUnit.NANOSECONDS) // Infinite timeout for WebSocket
+            .readTimeout(0, TimeUnit.MILLISECONDS) // Infinite timeout for WebSocket
             .build()
 
         val request = Request.Builder()
